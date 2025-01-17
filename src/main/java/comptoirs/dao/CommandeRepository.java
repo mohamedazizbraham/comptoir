@@ -17,4 +17,19 @@ public interface CommandeRepository extends JpaRepository<Commande, Integer> {
              
             """ )
     BigDecimal montantArticles(Integer numeroCommande);
+    @Query(
+            // Chaîne de caractères multilignes
+            """
+             SELECT c.numero AS numeroCommande,
+                    c.saisiele AS saisiele,
+                    c.envoyeele AS envoyeele,
+                    c.port AS port,
+                    c.destinataire AS destinataire,
+                    c.remise AS remise  
+             FROM Commande c
+             WHERE c.client.code= :codeClient
+             
+            """ )
+    List<Commande> findCommandeByCodeClient(String codeClient);
+
 }
