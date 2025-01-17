@@ -10,4 +10,5 @@ public interface CommandeProjection {
     BigDecimal getPort();
     String gedtDestinatiare();
     BigDecimal getRemise();
+
 }
