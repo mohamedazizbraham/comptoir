@@ -30,6 +30,6 @@ public interface CommandeRepository extends JpaRepository<Commande, Integer> {
              WHERE c.client.code= :codeClient
              
             """ )
-    List<Commande> findCommandeByCodeClient(String codeClient);
+    List<CommandeProjection> findCommandeByCodeClient(String codeClient);
 
 }
