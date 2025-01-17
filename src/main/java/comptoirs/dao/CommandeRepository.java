@@ -15,6 +15,6 @@ public interface CommandeRepository extends JpaRepository<Commande, Integer> {
              FROM Ligne l
              WHERE l.commande.numero= :numeroCommande
              
-            """)
+            """ )
     BigDecimal montantArticles(Integer numeroCommande);
 }
