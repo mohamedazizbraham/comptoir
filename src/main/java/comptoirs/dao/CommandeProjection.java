@@ -1,4 +1,4 @@
-package projection;
+package comptoirs.dao;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
